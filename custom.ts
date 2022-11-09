@@ -98,10 +98,11 @@ namespace custom {
     
     /**
      * startSending
+     * @param ms sleep time(ms), eg: 1000
      */
     //% block = "start sending"
     //% shim=custom::startSending
-    export function startSending(ms: int32) {
+    export function startSending(ms: number) {
         return;
     }
 }
