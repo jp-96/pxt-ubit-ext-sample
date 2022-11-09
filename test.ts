@@ -1,13 +1,13 @@
 // tests go here; this will not be compiled when this package is used as an extension.
 input.onButtonPressed(Button.A, function () {
-    a = custom.bar(a)
+    custom.startSending(1000)
+})
+custom.onReceivedString(function (receivedString) {
+    basic.showString(receivedString)
+})
+input.onButtonPressed(Button.AB, function () {
+    custom.startSending(100)
 })
 input.onButtonPressed(Button.B, function () {
-    a = 0
-})
-let a = 0
-a = 0
-basic.forever(function () {
-    basic.showNumber(a)
-    basic.pause(100)
+    custom.startSending(-1)
 })
